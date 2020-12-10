@@ -1,0 +1,76 @@
+package hotelmanagement;
+
+import java.io.IOException;
+import java.sql.*;
+import java.io.PrintWriter;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
+import javax.servlet.GenericServlet;
+import javax.servlet.RequestDispatcher;
+import javax.servlet.ServletException;
+import javax.servlet.ServletRequest;
+import javax.servlet.ServletResponse;
+import javax.servlet.annotation.WebServlet;
+
+/**
+ * Servlet implementation class roomdetails
+ */
+@WebServlet("/roomdetails")
+public class roomdetails extends GenericServlet {
+	private static final long serialVersionUID = 1L;
+
+	/**
+	 * @see Servlet#service(ServletRequest request, ServletResponse response)
+	 */
+	public void service(ServletRequest request, ServletResponse response) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		response.setContentType("text/plain");
+	      PrintWriter out = response.getWriter();
+	   Connection con;
+	   PreparedStatement ps;
+	   ResultSet rs;
+	   int result=0;
+	    try
+	   {
+	      Class.forName("com.mysql.jdbc.Driver");
+	    }
+	    catch(ClassNotFoundException e)
+	    { 
+	      e.printStackTrace();
+	    }
+	    try
+		   {
+	    	
+		      String checkin  = request.getParameter("checkin");
+		      String checkout=request.getParameter("checkout");
+		      int noofnight  = Integer.parseInt(request.getParameter("noofnight"));
+		      int   noofadults= Integer.parseInt(request.getParameter("noofadults"));
+		      int  noofchildren = Integer.parseInt(request.getParameter("noofchildren"));
+		     
+		      con = DriverManager.getConnection("jdbc:mysql://localhost:3306/s41","root","root");
+		     
+		      ps = con.prepareStatement("insert into bookingdetail values(?,?,?,?,?);");
+		      ps.setString(1,checkin);
+		      ps.setString(2,checkout);
+		      ps.setInt(3,noofnight);
+		      ps.setInt(4,noofadults);
+		      ps.setInt(5,noofchildren);
+		      
+		      
+		      result +=ps.executeUpdate();
+		 out.println("booked:"+result);
+		     RequestDispatcher dis= request.getRequestDispatcher("bookingconfirmation.html");
+		     dis.forward(request,response);
+		   }
+	    catch(Exception e)
+	    		{e.printStackTrace();
+	    		}
+	}}
+	    		
+
+
+

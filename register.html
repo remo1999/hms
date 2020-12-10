@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>register</title>
+<style>
+body
+
+{
+margin=0;
+padding=0;
+font-Family: "Times New Roman", Times, serif;
+ background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.image {
+  height: 500px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+.cust
+{
+position:absolute;
+margin-right:18px;
+width:10px;
+height:8px;
+padding-top: 4px;
+
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  border: 1px solid #e7e7e7;
+  background-color: #f3f3f3;
+
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: #666;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+</style>
+<link rel="stylesheet" href="style.css">
+</head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<body background="C:\Users\User\Desktop\notepad\imgregister.jpg">
+
+<div class="w3-top">
+  <div class="w3-bar w3-white w3-wide w3-padding w3-card">
+    <a href="#home" class="w3-bar-item w3-button"><img src="C:\Users\User\Desktop\notepad\images\hotllogo.jpg" alt="spa" width=100 height=50 ></a>
+    <!-- Float links to the right. Hide them on small screens -->
+    <div class="w3-right w3-hide-small">
+      <a href="homepage2.jsp" class="w3-bar-item w3-button">Home</a>
+      <a href="register.html" class="w3-bar-item w3-button">Register</a>
+      <a href="loginn.jsp" class="w3-bar-item w3-button">Login</a>
+    </div>
+  </div>
+</div>
+<br><br><br><br><br><br><br><br><br><br>
+
+<div class="form">
+    <form method = "get" action ="./register">
+    
+    
+<center> <h1> REGISTER </h1> </center>
+<label for="mobileno"><b>USERNAME</b></label> <br>
+<input type="text" placeholder="username " name="userid" required>
+
+<label for="FIRSTNAME"><b>FIRST NAME</b></label> <br>
+<input type="text" placeholder="Enter first name" name="fname" required>
+
+
+
+<label for="LASTNAME"><b>LAST NAME</b></label> <br>
+<input type="text" placeholder="Enter last name" name="lastmane" required>
+
+
+<label for="email"><b>Email</b></label><br>
+    <input type="text" placeholder="Enter Emailid" name="email" required>
+    
+
+    <label for="psw"><b>Password</b></label><br>
+    <input type="password" placeholder="Enter Password" name="password" required><br><br>
+<center>  <button>REGISTER </button>  </center>
+<center> <p class="message">Already Registered? <a href="loginn.jsp">LOGIN </a> </center>
+</p>
+
+</form>
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Room Details</title>
+<link rel="stylesheet" type="text/css" href="roomstyle.css">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1/themes/smoothness/jquery-ui.min.css" rel="stylesheet" type="text/css" />
+ 
+
+<style>
+body{
+background-size:cover;
+}
+.sign_up
+{
+border-radius :5px;
+background:#808080;
+padding:20px;
+width:420px;
+margin:auto;
+color:#fff;
+font-size:16px;
+font-family:Verdana;
+margin-top:100px;
+opacity:0.6;
+}
+.sign_up h1{
+text-align:center;
+margin:0;
+padding:0;
+}
+.sign_up label,input,select{
+pading:20px 30px;
+margin:8px 0;
+display:inline-block;
+border:1px solid blue;
+border-radius:6px;
+box-sizing:border-box;
+font-size:16px;
+background:blue;
+color:white;
+opacity:0.6;
+
+}
+.sign_up input[input=submit]
+{
+width:50%;
+border:none;
+cursor:pointer;
+background:blue;
+}
+inout[type=submit]:hover{
+
+transition:0.6s;
+background:blue;
+}
+option
+{
+color:white;
+background:black;
+
+}
+.button {
+  background-color: blue;
+  border: none;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+.button4 {border-radius: 12px;}
+}
+
+</style>
+
+</head>
+<div class="w3-top">
+  <div class="w3-bar w3-white w3-wide w3-padding w3-card">
+    <a href="#home" class="w3-bar-item w3-button"><img src="C:\Users\User\Desktop\notepad\images\hotllogo.jpg" alt="spa" width=100 height=50 ></a>
+    <!-- Float links to the right. Hide them on small screens -->
+    <div class="w3-right w3-hide-small">
+      <a href="home.jsp" class="w3-bar-item w3-button">Home</a>
+      <a href="aboutus.html" class="w3-bar-item w3-button">Aboutus</a>
+      <a href="search.html" class="w3-bar-item w3-button">Search</a>
+      <a href="contactus.html" class="w3-bar-item w3-button">Contactus</a>
+      <a href="homepage2.jsp" class="w3-bar-item w3-button">Logout</a>
+    </div>
+  </div>
+</div>
+<body background ="C:\Users\User\Desktop\notepad\roomdetails.jpg">
+<div class ="sign_up">
+ <form method ="post" action ="./roomdetails">
+<h1> ROOM DETAILS </h1>
+<hr>
+<label>CHECK IN </label> &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<input type="datetime-local"  name="t1"   placeholder ="dd/mm/yyyy"   required>
+
+<br>
+<label>CHECK OUT</label> &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<input type="datetime-local"  name="t2"   placeholder ="dd/mm/yyyy" required>
+<br>
+<label>NO.OF ROOMS</label>&nbsp&nbsp&nbsp&nbsp&nbsp
+<select name="t3" >
+<option value="1">1</option>
+<option value="2">2</option>
+<option value="3">3</option>
+<option value="4">4</option>
+<option value="5">5</option>
+
+</select>
+<br><br>
+<label>NO OF ADULTS</label>&nbsp&nbsp&nbsp&nbsp&nbsp
+<select name="t4" >
+<option value="1">1</option>
+<option value="2">2</option>
+<option value="3">3</option>
+<option value="4">4</option>
+<option value="5">5</option>
+</select><br><br>
+<label>NO OF CHILDREN </label>&nbsp&nbsp&nbsp&nbsp&nbsp
+<select name="t5" >
+<option value="0">0</option>
+<option value="1">1</option>
+<option value="2">2</option>
+<option value="3">3</option>
+<option value="4">4</option>
+<option value="5">5</option>
+</select><br><br>
+<label>ROOM NAME </label>&nbsp&nbsp&nbsp&nbsp&nbsp
+<select name="t6" >
+<option value="single room">SINGLE ROOM</option>
+<option value="double room">DOUBLE ROOM </option>
+<option value="deluxe room">DELUXE ROOM</option>
+<option value="signature room">SIGNATURE ROOM</option>
+<option value="superior room">SUPERIOR ROOM</option>
+<option value="super deluxe room">SUPER DELUXE ROOM</option>
+</select><br><br>
+
+<center>   
+<a href="bookingdetail.jsp"><button class="button button4">Back</button> </a>
+<a href="bookingconfirmation.jsp"><button class="button button4">Book</button></a>
+</center>
+</form>
+</div>
+</body>
+</html>
+

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
+<title> DISCOUNTS </title>
+
+<style>
+.checked {
+color: orange;
+}
+.links
+{
+border-radius:10px;
+}
+.links:hover
+{
+background-color:green;
+}
+.zoom
+{
+transition:transform 0.3s;
+}
+.zoom:hover
+{
+transform:scale(1.04);
+}
+</style>
+</head>
+
+<body>
+<div class="w3-top">
+  <div class="w3-bar w3-white w3-wide w3-padding w3-card">
+    <a href="#home" class="w3-bar-item w3-button"><img src="C:\Users\User\Desktop\notepad\images\hotllogo.jpg" alt="spa" width=100 height=50 ></a>
+    <!-- Float links to the right. Hide them on small screens -->
+    <div class="w3-right w3-hide-small">
+       <a href="home.jsp" class="w3-bar-item w3-button">Home</a>
+      <a href="aboutus.html" class="w3-bar-item w3-button">Aboutus</a>
+      <a href="search.html" class="w3-bar-item w3-button">Search</a>
+      <a href="contactus.html" class="w3-bar-item w3-button">Contactus</a>
+      <a href="homepage2.jsp" class="w3-bar-item w3-button">Logout</a>
+    </div>
+  </div>
+</div>
+<center>
+<div class="slideshow-container">
+
+<div class="mySlides fade">
+ <img src="C:\Users\User\Desktop\notepad\discount1.jpg" width=1900 height=500 >
+ </div>
+
+<div class="mySlides fade">
+<img src="C:\Users\User\Desktop\notepad\discount2.jpg" width=1900 height=500>
+ </div>
+
+<div class="mySlides fade">
+<img src="C:\Users\User\Desktop\notepad\discount3.jpg" width=1900 height=500>
+</div>
+
+</div>
+</center>
+<div style="text-align:center">
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+</div>
+  <div class="w3-container w3-margin-top">
+    <h1>Good Offers Right Now</h1>
+    <h6>Up to <strong>50%</strong> discount.</h6>
+  </div>
+  <div class="w3-row-padding w3-text-white w3-large">
+    <div class="w3-half w3-margin-bottom">
+      <div class="w3-display-container">
+        <img src="C:\Users\User\Desktop\notepad\room8.jpg" alt="Cinque Terre" style="width:100%">
+        <span class="w3-display-bottomleft w3-padding">beds</span>
+      </div>
+    </div>
+    <div class="w3-half">
+      <div class="w3-row-padding" style="margin:0 -16px">
+        <div class="w3-half w3-margin-bottom">
+          <div class="w3-display-container">
+            <img src="C:\Users\User\Desktop\notepad\pool.jpg" alt="rooms" style="width:100%">
+            <span class="w3-display-bottomleft w3-padding">pool</span>
+          </div>
+        </div>
+        <div class="w3-half w3-margin-bottom">
+          <div class="w3-display-container">
+            <img src="C:\Users\User\Desktop\notepad\spas.jpg" alt="San Francisco" style="width:100%">
+            <span class="w3-display-bottomleft w3-padding">spa</span>
+          </div>
+        </div>
+      </div>
+      <div class="w3-row-padding" style="margin:0 -16px">
+        <div class="w3-half w3-margin-bottom">
+          <div class="w3-display-container">
+            <img src="C:\Users\User\Desktop\notepad\rest.jpg"alt="Pisa" style="width:100%">
+            <span class="w3-display-bottomleft w3-padding">restroom</span>
+          </div>
+        </div>
+        <div class="w3-half w3-margin-bottom">
+          <div class="w3-display-container">
+            <img src="C:\Users\User\Desktop\notepad\foods.jpg" alt="Paris" style="width:100%">
+            <span class="w3-display-bottomleft w3-padding">food</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+<div class="w3-container">
+    <div class="w3-panel w3-padding-16 w3-black w3-opacity w3-card w3-hover-opacity-off">
+      <h2>Get the best offers first!</h2>
+      <p>Join our newsletter.</p>
+      <label>E-mail</label>
+      <input class="w3-input w3-border" type="text" placeholder="Your Email address">
+     <a href="bookingdetail.html"> <button type="button" class="w3-button w3-red w3-margin-top">Subscribe</button></a>
+    </div>
+  </div>
+<script>
+var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}    
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+  setTimeout(showSlides, 2000); // Change image every 2 seconds
+}
+
+</script>
+
+</body>
+</html> 
